@@ -1,0 +1,15 @@
+@import "src/scss/constants";
+@import "src/scss/@extends";
+
+.login__form {
+  @extend %form-sets;
+
+  width: 320px;
+  margin: auto;
+
+  &-btn {
+    width: 100%;
+
+    @extend %btn;
+  }
+}

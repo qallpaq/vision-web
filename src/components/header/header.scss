@@ -1,0 +1,42 @@
+@import "src/scss/constants";
+
+.header {
+  background-color: #2C2C2C;
+  border-top: 5px solid #A30000;
+  width: 100%;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+  color: #ffffff;
+
+  &_login {
+    color: #333;
+    margin-bottom: 20px;
+  }
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
+}
+
+.links__item:nth-child(1) {
+  margin-right: 20px;
+}

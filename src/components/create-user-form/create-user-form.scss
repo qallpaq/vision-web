@@ -1,0 +1,27 @@
+@import "src/scss/constants";
+@import "src/scss/@extends";
+
+.user-form {
+  max-width: 1140px;
+  @extend %form-sets;
+
+  margin-top: $header-height + 100px;
+  min-height: 20px;
+  margin-bottom: 20px;
+
+  &__btn-wrapper {
+    text-align: right;
+  }
+
+  &__btn {
+    @extend %btn;
+  }
+}
+
+
+@media screen and (max-width: 860px) {
+  .form__item-title {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

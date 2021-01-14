@@ -1,0 +1,135 @@
+@import "src/scss/constants";
+@import "src/scss/@extends";
+
+.form__item {
+  flex-grow: 1;
+  height: 34px;
+  padding: 6px 12px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  &:focus {
+    box-shadow: 0 0 3px 1px rgba(0, 99, 255, 0.5);
+  }
+
+  &_error {
+    border-color: $error-color;
+
+    &:focus {
+      box-shadow: 0 0 3px 1px rgba(255, 0, 0, 0.5);
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+
+    &:nth-child(1) {
+      border-top: 1px solid #d4d4d4;
+      padding-top: 10px;
+    }
+  }
+
+  &-error {
+    width: 100%;
+    text-align: center;
+    color: $error-color;
+
+    animation: show-error .2s;
+  }
+
+  &-content {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  &-text {
+    color: grey;
+    text-align: center;
+  }
+
+  &-title {
+    &.error {
+      color: $error-color;
+    }
+
+    @extend %form-title;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+@keyframes show-error {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.form__title {
+  @extend %form-title;
+}
+
+.form__title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.login__form {
+  &-wrapper {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form__item {
+    width: 100%;
+  }
+
+  &-label {
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &-error {
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    width: 250px;
+    text-align: center;
+    z-index: 2;
+    border: 1px solid rgba(123, 123, 123, .5);
+    box-shadow: 5px 5px 5px 1px rgba(123, 123, 123, .5);
+    border-radius: 3px;
+    padding: 10px 25px;
+    background-color: #fff;
+    font-size: 16px;
+  }
+
+  &-ico {
+    padding: 5px 10px;
+    background: orange;
+    border-radius: 3px;
+    color: #fff;
+    margin-right: 7px;
+  }
+}
