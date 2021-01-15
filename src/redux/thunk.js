@@ -1,5 +1,5 @@
-import UserService from "../userAPI"
 import {locStorage} from "../helpers"
+import UserService from "../userAPI"
 import {
     getUserInfo,
     isAuth,

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login should return snapshot 1`] = `
+<div
+  className="login__page"
+>
+  <ReduxForm
+    destroyOnUnmount={true}
+    enableReinitialize={false}
+    forceUnregisterOnUnmount={false}
+    form="loginForm"
+    getFormState={[Function]}
+    keepDirtyOnReinitialize={false}
+    persistentSubmitErrors={false}
+    pure={true}
+    shouldAsyncValidate={[Function]}
+    shouldError={[Function]}
+    shouldValidate={[Function]}
+    shouldWarn={[Function]}
+    submitAsSideEffect={false}
+    touchOnBlur={true}
+    touchOnChange={false}
+    updateUnregisteredFields={false}
+  />
+</div>
+`;

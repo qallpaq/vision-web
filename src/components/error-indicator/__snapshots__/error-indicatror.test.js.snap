@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorIndicator should return snapshot 1`] = `
+<div
+  className="error-page"
+>
+  <div
+    className="error-page__content"
+  >
+    <h1
+      className="error-page__title"
+    >
+      Something goes wrong...
+    </h1>
+    <div
+      className="error-page__subtitle"
+    >
+      don\`t worry we will fix it
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ads 1`] = `
+<div
+  className="error-page"
+>
+  <div
+    className="error-page__content"
+  >
+    <h1
+      className="error-page__title"
+    >
+      Something goes wrong...
+    </h1>
+    <div
+      className="error-page__subtitle"
+    >
+      don\`t worry we will fix it
+    </div>
+  </div>
+</div>
+`;

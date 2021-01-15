@@ -31,9 +31,7 @@ export const User = ({user}) => {
                 </div>
 
                 <div className='user__right'>
-                    <ul className='user-content'>
-                        {UserContent(createUserInfo(user))}
-                    </ul>
+                    {UserContent(createUserInfo(user))}
                 </div>
 
             </div>
