@@ -8,9 +8,9 @@ password 55555
 1)Необходимо использовать Axios для обращения к серверу, React-router-dom для роутинга, Redux для state-management. <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'>
 
 
-2) '-/' -главная страница, для вывода информации о пользователя, приватный роут
+<div>2) '-/' -главная страница, для вывода информации о пользователя, приватный роут
 '/signup' - регистрация, публичный роут
-'/login' - авторизация, публичный роут <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'>
+'/login' - авторизация, публичный роут <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'></div>
 
 
 3)На сервере используется JWT-авторизация, которая при успешном логине возвращает client_id пользователя, access_token, resfresh_token - для хранения необходимо использовать localStorage. <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'>
