@@ -5,12 +5,13 @@ password 55555
 
 <h1> Таски </h1>
 
-    1)Необходимо использовать Axios для обращения к серверу, React-router-dom для роутинга, Redux для state-management. <img width='30' height='30' src         ='https://img.icons8.com/metro/452/checkmark.png'>
+    1)Необходимо использовать Axios для обращения к серверу, 
+    React-router-dom для роутинга, Redux для state-management. <img width='30' height='30' src='https://img.icons8.com/metro/452/checkmark.png'>
 
 
     2)'-/' -главная страница, для вывода информации о пользователя, приватный роут
     '/signup' - регистрация, публичный роут
-    '/login' - авторизация, публичный роут <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'>
+    '/login' - авторизация, публичный роут <img width='30' height='30' src='https://img.icons8.com/metro/452/checkmark.png'>
 
 
     3)На сервере используется JWT-авторизация, 
