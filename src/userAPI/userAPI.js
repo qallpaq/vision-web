@@ -1,5 +1,5 @@
 import axios from "axios"
-import {locStorage} from "./helpers"
+import {locStorage} from "../helpers"
 
 
 export default class UserService {

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorBoundary should return snapshot 1`] = `
+<ErrorBoundary>
+  <Child>
+    <div
+      className="child"
+    >
+      child
+    </div>
+  </Child>
+</ErrorBoundary>
+`;

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="header__inner"
+    >
+      <span
+        className="logo"
+      >
+        Vision Web
+      </span>
+      <ul
+        className="links"
+      >
+        <li
+          className="links__item"
+        >
+          <HeaderButton
+            link="/login"
+            text="Log In"
+          />
+        </li>
+        <li
+          className="links__item"
+        >
+          <HeaderButton
+            link="/signup"
+            text="Sign Up"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+`;

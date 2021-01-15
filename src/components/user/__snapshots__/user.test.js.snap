@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User snapshot 1`] = `
+<User
+  user={
+    Object {
+      "avatar": "asd",
+    }
+  }
+>
+  <div
+    className="container"
+  >
+    <div
+      className="user__page"
+    >
+      <div
+        className="user__left"
+      >
+        <div
+          className="user__img-wrapper"
+        >
+          <img
+            alt="avatar"
+            className="user__img-inner"
+            src="asd"
+          />
+        </div>
+      </div>
+      <div
+        className="user__right"
+      >
+        <ul
+          className="user-content"
+        />
+      </div>
+    </div>
+  </div>
+</User>
+`;
