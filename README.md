@@ -14,7 +14,8 @@ password 55555
 
 
     3)На сервере используется JWT-авторизация, 
-    которая при успешном логине возвращает client_id пользователя, access_token, resfresh_token - для хранения необходимо использовать localStorage. <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'>
+    которая при успешном логине возвращает client_id пользователя, access_token, 
+    resfresh_token - для хранения необходимо использовать localStorage. <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'>
 
 
     4)Если авторизованный пользователь переходит напрямую на /login или /signup - его нужно отправлять на главную, на приватный роут. <img width='30' height='30' src ='https://img.icons8.com/metro/452/checkmark.png'> (Изминенный кейс, если пользователь авторизован,
