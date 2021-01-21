@@ -6,8 +6,6 @@ import LoginContainer from "../login"
 import SignUpContainer from "../sign-up"
 import './app.scss'
 
-// +7 (988) 044-22-42
-// 55555
 
 const App = () => {
     return (

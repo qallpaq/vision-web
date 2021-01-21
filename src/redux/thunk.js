@@ -11,60 +11,58 @@ import {
 
 const user = new UserService()
 
-const createUser = data => dispatch => {
-    user.createUser(data)
-        .then(res => {
-            if (res.status < 300) {
-                alert('Аккаунт создан!')
-                dispatch(userIsCreated())
-            }
-        })
-        .catch(error => {
-            if (error.response) {
-                const errorMessage = Object
-                    .values(error.response.data)
-                    .map(el => el[0] || el.email)
+const createUser = data => async dispatch => {
+    try {
+        const res = await user.createUser(data)
+        if (res.status < 300) {
+            alert('Аккаунт создан!')
+            dispatch(userIsCreated())
+        }
+    } catch (e) {
+        if (e.response) {
+            const errorMessage = Object
+                .values(e.response.data)
+                .map(el => el[0] || el.email)
 
-                alert(errorMessage)
-            }
-        })
-}
-
-const loginUser = data => dispatch => {
-    user.authUser(data.login_name, data.login_password)
-        .then(res => {
-            if (res.status < 300) {
-                locStorage('token', res.data.access)    // setter
-                locStorage('client_id', res.data.client_id)
-                locStorage('refresh', res.data.refresh)
-                alert('Вы вошли в аккаунт!')
-                dispatch(isAuth())
-            }
-        })
-        .catch(error => {
-            locStorage()   // clean localStorage
-            dispatch(isNotAuth())
-            alert(error.response.data.detail)
-        })
-}
-
-const getUser = () => dispatch => {
-    if (locStorage('token')) {    // getter
-        dispatch(toggleIsFetching(true))
-        user.getUser()
-            .then(res => {
-                if (res.status < 300) {
-                    dispatch(getUserInfo(res.data))
-                } else if (res.status === 401) {
-                    user.refreshToken(locStorage('refresh'))
-                        .catch(() => {
-                            dispatch(isNotAuth())
-                            locStorage()
-                        })
-                }
-            })
-            .then(() => dispatch(toggleIsFetching(false)))
+            alert(errorMessage)
+        }
     }
+}
+
+const loginUser = data => async dispatch => {
+    try {
+        const res = await user.authUser(data.login_name, data.login_password)
+        if (res.status < 300) {
+            locStorage('token', res.data.access)    // setter
+            locStorage('client_id', res.data.client_id)
+            locStorage('refresh', res.data.refresh)
+            alert('Вы вошли в аккаунт!')
+            dispatch(isAuth())
+        }
+    } catch (e) {
+        locStorage()   // clean localStorage
+        dispatch(isNotAuth())
+        alert(e.response.data.detail)
+    }
+}
+
+const getUser = () => async dispatch => {
+    dispatch(toggleIsFetching(true))
+
+    try {
+        if (locStorage('token')) {
+            const res = await user.getUser()
+            dispatch(getUserInfo(res.data))
+        }
+    } catch (e) {
+        user.refreshToken(locStorage('refresh'))
+            .catch(() => {
+                dispatch(isNotAuth())
+                locStorage()
+            })
+    }
+
+    dispatch(toggleIsFetching(false))
 }
 
 export {
